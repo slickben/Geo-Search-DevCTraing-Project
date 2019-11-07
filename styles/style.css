@@ -1,0 +1,136 @@
+/* @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"; */
+
+
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Source Sans Pro'  ;
+    /* text-align: center */
+}
+
+#map {
+    display: none
+}
+.container {
+    width: 100%;
+    margin: 30px auto;
+}
+/* .................heeder................ */
+header {
+    width: 100%;
+    margin: 30px auto;
+    font-size: 20px
+}
+header h1, h2 {
+    text-align: center;
+    color:  #565656
+}
+header h2 {
+    font-weight: lighter
+}
+header h1 {
+    font-weight: 500
+}
+/* .................Search Area................ */
+section {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.search-sec  {
+    width: 100%
+}
+
+.search-sec  form {
+    width: 100%;
+    /* margin: 0 4.3em */
+}
+
+.search-sec  form input {
+    font-family: "Font Awesome 5 Free", 'Source Sans Pro';
+    font-weight: 900;
+    font-size: 20px;
+    width: 47%;
+    margin-left: 27%;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid rgba(10, 0, 0, 0.15)
+}
+
+
+.search-sec  form input::placeholder {
+    padding:  10px ;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700
+}
+
+/* ................current location and others */
+
+.currrent-location {
+    text-align: center;
+    text-transform: capitalize
+
+}
+
+.cloud {
+    display:  flex;
+    justify-content: center
+}
+
+.cloud img{
+    width: 100px;
+    height: 100px
+}
+.currrent-location p {
+    font-weight: 300;
+    font-size: 12px
+}
+
+.currrent-location h2 {
+    font-weight: 300;
+    font-size: 25px;
+    color:  #565656;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.currrent-location i {
+    padding-right: 10px;
+}
+
+.currrent-location a {
+    text-decoration: none;
+    border: 2px solid rgba(10, 0, 0, 0.15);
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #565656
+}
+
+.currrent-location article{
+    margin-bottom: 30px;
+}
+
+/* ............footer..................... */
+.more-info ul {
+    display: flex;
+    justify-content: center;
+    color: #565656
+} 
+
+.more-info ul li {
+    list-style: none;
+    margin: 0 40px;
+}
+.more-info ul li h1 {
+    font-size: 45px
+}
+
+.more-info ul li .box {
+    display:  flex;
+}
+.more-info ul li span {
+    font-size: 15px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/location.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section class="map">
+                <header>
+                    <input type="search" name="" placeholder="&#xf3c5 Search for places and location" id="">
+                </header>
+                <div id="map"></div>
+            </section>
+        </main>
+        <aside>
+            <header>
+                <div>
+                    <button> <img src="../icons/svg/gps-fixed-indicator.svg" alt="" srcset=""> Current </button>
+                </div>
+            </header>
+            <section class="info">
+                <article>
+                    <div class="top">
+                        <p>Ikeja</p>
+                        <div>
+                            <img src="../icons/svg/share.svg" alt="" srcset=""> 
+                            <a href="#" target="_blank" rel="noopener noreferrer">Share</a>
+                        </div>
+                    </div>
+                    <div class="buttom">
+                        <ul>
+                            <li>
+                                <img src="../icons/svg/010-blizzard.svg">
+                                <div>
+                                    <p>rainy</p>
+                                    <p>28C</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../icons/svg/004-drop.svg" alt="" srcset="">
+                                <div>
+                                    <p>humidiy</p>
+                                    <p>73 %</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../icons/svg/001-wind.svg" alt="" srcset="">
+                                <div>
+                                    <p>wide</p>
+                                    <p>12m/s</p>
+                                </div>
+                            </li>              
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <article class="one">
+
+                </article>
+                <article class="two">
+                    
+                </article>
+                <article class="three">
+                    
+                </article>
+                <article class="four">
+                    
+                </article>
+                <article class="five">
+                    
+                </article>
+            </section>
+        </aside>
+    </div>
+    <script src="../Script/index.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCp8kzA-zeQqHbhPXXGTg_qlqtSOmZfNM&callback=initMap">
+    </script>
+</body>
+</html>

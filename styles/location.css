@@ -1,0 +1,219 @@
+*  {
+    margin: 0;
+    padding:  0;
+    font-family: 'Source Sans Pro'  ;
+}
+
+.container {
+    display:  grid;
+    grid-template-areas: 
+        'aside aside main main main main main main main main main main'
+        'aside aside main main main main main main main main main main'
+        'aside aside footer footer footer footer footer footer footer footer footer footer'
+        ;
+    gap: 5px;
+
+}
+
+main {
+     /* background-color: aqua; */
+     grid-area: main;
+     height: 95vh;
+     /* border: 2px solid rgba(0, 0, 0, 0.116); */
+     /* border-radius: 5px */
+}
+
+main .map {
+    height: 100vh;
+    /* background-image: url('../images/7.jpg'); */
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* margin: 0 15px; */
+    border-radius: 5px
+}
+
+main .map #map {
+    position: absolute;
+    height: 100vh;
+    margin-top: -59px;
+    width: 76.7%;
+    z-index: -1;
+}
+
+
+main header input {
+    width:  60%;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: "Font Awesome 5 Free", 'Source Sans Pro';
+    font-weight: 900;
+    font-size: 20px;
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid rgba(10, 0, 0, 0.15)
+}
+aside {
+    height: 100vh;
+    background-color: rgb(248, 248, 248);
+    grid-area: aside;
+}
+
+aside header div img {
+    width: 20px
+}
+
+aside header div button {
+    text-align: left;
+    margin-top: 20px ;
+    margin-left: 15px;
+    /* margin-right: 20px; */
+    width: 90%;
+    padding: 7px 0 7px 7px;
+    padding-top: -12;
+    font-size: 20px;
+    background-color: #fff;
+    /* border: 2px solid rgba(0, 0, 0, 0.212); */
+    border: none;
+    outline: none;
+    border-radius: 5px
+
+}
+
+aside header div {
+    background-color: rgb(88, 67, 67);
+    background-image: url('../images/7.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+
+aside .places-aside-head div{
+    background-image: url('../images/Rhapsodys.jpg');
+}
+
+aside section {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    max-height: 260px;
+    height: 400px;
+    scrollbar-width: thin;
+
+}
+
+aside section::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+aside section::-webkit-scrollbar-thumb {
+    background-color: #00000075;
+}
+
+
+aside section article {
+    height: 120px;
+    background-color: rgb(211, 76, 76);
+    /* border: 1px solid black; */
+    margin: 10px 10px;
+    border-radius: 5px
+}
+
+aside section .one {
+    background-image: url('../images/1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+aside section .two {
+background-image: url('../images/1fdc6fcf.jpg');
+background-position: center;
+    background-size: cover;
+}
+aside section .three {
+    background-image: url('../images/IKEJA-CITY-MALL.jpg');
+    background-position: center;
+    background-size: cover;
+}
+aside section .four {
+    background-image: url('../images/Johnson-Jakande-Tinubu-JJT-Park-Alausa-Ikeja-for-the-Easter-celebration-BRAND-SPUR-NIGERIA-2.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+aside section .five {
+    background-image: url(../images/Rhapsodys.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+aside .info {
+    /* max-width: 200px; */
+    overflow: hidden;
+    height: 140px;
+    margin-top: -40px;
+    /* z-index: 5; */
+    background-color: rgba(255, 255, 255, 0);
+}
+
+aside .info article {
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.24) ;
+    
+}
+
+aside .info .top img {
+    width: 15px
+}
+
+
+aside .info .top div {
+    /* display: flex; */
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    padding: 3px 10px;
+    border-radius: 5px
+}
+
+aside .info .top .about-place {
+    display: block;
+    border: none;
+    padding: 3px 10px;
+    /* border-radius: 5px */
+}
+
+aside .info .top div a {
+    text-decoration: none;
+    color: #000;
+}
+
+aside .info .top p {
+    font-size: 16px;
+    font-weight: 400
+}
+
+aside .info .top  {
+    display:  flex; 
+    justify-content: space-between;
+    /* grid-template-collum:  */
+    margin: 5px 10px 30px 10px 
+}
+
+aside .info .buttom ul { 
+    display:  flex;
+    justify-content: space-between;
+    max-width: 100px;
+}
+aside .info .buttom ul li {
+    display: flex;
+    list-style: none;
+    padding: 0 5px
+}
+
+aside .info .buttom ul li  img{
+    width: 40px
+}
+
+
+
