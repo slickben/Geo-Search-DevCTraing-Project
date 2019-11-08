@@ -21,7 +21,7 @@ class UI {
     static showLocalCondition = ({main, wind}) => {
         let localCondition = [
             {
-                name: "temprature",
+                name: "temperature",
                 value: main.temp
             },
             {
@@ -35,7 +35,7 @@ class UI {
         ];
 
         const symbol = (type) => {
-            if(type === "temprature"){
+            if(type === "temperature"){
                 return '\xB0C.'
             }else if(type === "wind speed") {
                 return 'm/s'
@@ -63,6 +63,7 @@ class UI {
 const getCurrentLocation = () => {
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition( (position) => {
+            console.log(position)
             let pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
@@ -86,6 +87,12 @@ const getLocationWeatherData = (lat, lng,) => {
         UI.showCurrentWeether(data)
         UI.showLocalCondition(data)
     })
+};
+
+//autocomplete search
+function  actvitePlaceSearch () {
+    let input = document.getElementById('search-input');
+    let autocomplete = new google.maps.places.Autocomplete(input)
 }
 
 getCurrentLocation()
