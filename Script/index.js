@@ -1,10 +1,8 @@
 //Dom Elements
-const  locationName = document.getElementById('locationName')
-const  Currentweather = document.getElementById('weather')
-const showLocalCondition = document.getElementById('local-condition')
-weather
-
-
+const  locationName = document.getElementById('locationName');
+const  Currentweather = document.getElementById('weather');
+const showLocalCondition = document.getElementById('local-condition');;
+let input = document.getElementById('search-input');
 
 //UI  class
 class UI {
@@ -91,9 +89,17 @@ const getLocationWeatherData = (lat, lng,) => {
 
 //autocomplete search
 function  actvitePlaceSearch () {
-    let input = document.getElementById('search-input');
     let autocomplete = new google.maps.places.Autocomplete(input)
+
+    let searchBox = new google.maps.places.SearchBox(input)
+
+    google.maps.event.addListener(searchBox, 'places_changed', function(){
+        console.log(searchBox.getPlaces());  
+        sessionStorge.setItem(place, searchBox.getPlaces())
+        
+    })
 }
+
 
 getCurrentLocation()
 
