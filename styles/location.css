@@ -61,7 +61,7 @@ aside {
 }
 
 aside header div img {
-    width: 20px
+    width: 15px
 }
 
 aside header div button {
@@ -165,7 +165,7 @@ aside .info article {
 }
 
 aside .info .top img {
-    width: 15px
+    width: 10px
 }
 
 
@@ -212,8 +212,20 @@ aside .info .buttom ul li {
 }
 
 aside .info .buttom ul li  img{
-    width: 40px
+    width: 35px
 }
 
+aside .info .buttom ul li div p{
+    font-size: 12px
+}
+
+aside .info .buttom ul li div .val{
+    font-size: 20px;
+    font-weight: 600
+}
+
+aside .info .buttom ul li div {
+    padding:  0 0 0 5px
+}
 
 

@@ -8,13 +8,80 @@ let input = document.getElementById('search-input');
 const showLocalCondition = document.getElementById('local-condition');
 const placeName = document.getElementById('placename');
 
+//get weather data
+const getLocationWeatherData = (lat, lng,) => {
+  console.log(lat, lng )
+  let key = '3fef7f09e3d16a2d67ba169848bd7e6f';
+  fetch('https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lng+ '&appid=' + key)
+  .then( (responce) => {
+      return responce.json()
+  })
+  .then( (data) => {
+      console.log(data)
+      UI.showNameOfLocation(data)
+      // UI.showCurrentWeether(data)
+      UI.showLocalCondition(data)
+  })
+};
 
 //searched place
 const  searchPlace = JSON.parse(sessionStorage.getItem("place"));
 const currentPlace = JSON.parse(sessionStorage.getItem("currentPlace"))
 const getSearchLatLng = searchPlace ?  searchPlace.map( (value) => value.geometry.location) : "";
-console.log(searchPlace)
+console.log(searchPlace);
 
+// convertion class
+
+
+//UI  class
+class UI {
+  constructor(CurrentWeatherData) {
+      this.weatherData = CurrentWeatherData
+  }
+  static showNameOfLocation = ({name}) => {
+    placeName.innerText = name
+  }
+  static showLocalCondition = ({main, wind, weather}) => {
+      let localCondition = [
+          {
+              name: weather[0].main,
+              value: main.temp
+          },
+          {
+              name: "wind",
+              value: wind.speed
+          },
+          {
+              name: "humidity",
+              value: main.humidity
+          }
+      ];
+
+      const image = (type) => {
+          if(type === "Clouds" || ''){
+              return '../icons/svg/014-cloudy.svg'
+          }else if(type === "wind") {
+              return '../icons/svg/004-drop.svg'
+          }else if(type === "humidity") {
+              return '../icons/svg/001-wind.svg'
+          }else if(type === "Rain"){
+              return '../icons/svg/006-rain.svg'
+          }
+      }
+
+      showLocalCondition.innerHTML = localCondition.map( (val, index) => {
+          return `
+              <li>
+                <img src="${image(val.name)}">
+                <div>
+                  <p>${val.name}</p>
+                  <p class="val">${val.value}</p>
+                </div>
+              </li>
+          `
+      })
+  }
+}
 
 
 
@@ -54,8 +121,7 @@ function initMap() {
   
   });
 
-
-
+  getLocationWeatherData(view().lat, view().lng)
 //autocomplete search
   let autocomplete = new google.maps.places.Autocomplete(input)
   let searchBox = new google.maps.places.SearchBox(input)
@@ -67,23 +133,25 @@ function initMap() {
       let bounds = new google.maps.LatLngBounds();
 
       places.map( (place) => {
-        console.log(place.geometry.location);
+        console.log(place.geometry);
         bounds.extend(place.geometry.location);
         marker.setPosition(place.geometry.location);
       });
 
       map.fitBounds(bounds);
-      map.setZoom(17) 
-
+      map.setZoom(17);
+      location.reload()
   })
 }
 
 
 
+
+
 //go back to current location func
 backToCurrentLocationBtn.addEventListener('click', function () {
-  sessionStorage.setItem('currentPlace', null)
-  location.replace('http://127.0.0.1:5500/Geo-Search/Geo-Search-DevCTraing-Project/index/index.html')
+  sessionStorage.setItem('place', null);
+  location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/index.html')
 })
 
 
