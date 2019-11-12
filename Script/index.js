@@ -1,16 +1,13 @@
 //Dom Elements
-const  locationName = document.getElementById('locationName');
+const  placeName = document.getElementById('locationName');
 const  Currentweather = document.getElementById('weather');
-const showLocalCondition = document.getElementById('local-condition');;
+const showLocalCondition = document.getElementById('local-condition');
 let input = document.getElementById('search-input');
 
 //UI  class
 class UI {
-    constructor(CurrentWeatherData) {
-        this.weatherData = CurrentWeatherData
-    }
     static showNameOfLocation = ({name}) => {
-        locationName.innerText = name
+        placeName.innerText = name
     }
     static showCurrentWeether = ({weather}) => {
         console.log(weather[0].main)
@@ -66,6 +63,7 @@ const getCurrentLocation = () => {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+            sessionStorage.setItem("currentPlace", JSON.stringify(pos))
             getLocationWeatherData(pos.lat, pos.lng,);
         })
     }
@@ -95,8 +93,9 @@ function  actvitePlaceSearch () {
 
     google.maps.event.addListener(searchBox, 'places_changed', function(){
         console.log(searchBox.getPlaces());  
-        sessionStorge.setItem(place, searchBox.getPlaces())
-        
+        sessionStorage.setItem("place", JSON.stringify(searchBox.getPlaces()))
+        location.replace("http://127.0.0.1:5500/Geo-Search/Geo-Search-DevCTraing-Project/index/location-map.html")
+
     })
 }
 

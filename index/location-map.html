@@ -14,7 +14,7 @@
         <main>
             <section class="map">
                 <header>
-                    <input type="search" name="" placeholder="&#xf3c5 Search for places and location" id="">
+                    <input id="search-input" type="search" name="" placeholder="&#xf3c5 Search for places and location" id="">
                 </header>
                 <div id="map"></div>
             </section>
@@ -22,20 +22,20 @@
         <aside>
             <header>
                 <div>
-                    <button> <img src="../icons/svg/gps-fixed-indicator.svg" alt="" srcset=""> Current </button>
+                    <button id="backToCurrentLocation"> <img src="../icons/svg/gps-fixed-indicator.svg" alt="" srcset=""> Current </button>
                 </div>
             </header>
             <section class="info">
                 <article>
                     <div class="top">
-                        <p>Ikeja</p>
+                        <p id="placename">Ikeja</p>
                         <div>
                             <img src="../icons/svg/share.svg" alt="" srcset=""> 
                             <a href="#" target="_blank" rel="noopener noreferrer">Share</a>
                         </div>
                     </div>
                     <div class="buttom">
-                        <ul>
+                        <ul id="local-condition">
                             <li>
                                 <img src="../icons/svg/010-blizzard.svg">
                                 <div>
@@ -80,9 +80,10 @@
             </section>
         </aside>
     </div>
-    <script src="../Script/index.js"></script>
+    <script src="../Script/location-map.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCp8kzA-zeQqHbhPXXGTg_qlqtSOmZfNM&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg0c1yJefuxjJHbV_lp_fz6BuYT53PXKc&libraries=places&callback=initMap">
     </script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg0c1yJefuxjJHbV_lp_fz6BuYT53PXKc&libraries=places&callback=actvitePlaceSearch"></script> -->
 </body>
 </html>
