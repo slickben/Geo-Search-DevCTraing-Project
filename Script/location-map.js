@@ -17,10 +17,10 @@ const getLocationWeatherData = (lat, lng,) => {
       return responce.json()
   })
   .then( (data) => {
-      console.log(data)
-      UI.showNameOfLocation(data)
-      // UI.showCurrentWeether(data)
-      UI.showLocalCondition(data)
+      console.log(data);
+      sessionStorage.setItem('weatherData', JSON.stringify(data))
+      UI.showNameOfLocation(data);
+      UI.showLocalCondition(data);
   })
 };
 
@@ -29,8 +29,6 @@ const  searchPlace = JSON.parse(sessionStorage.getItem("place"));
 const currentPlace = JSON.parse(sessionStorage.getItem("currentPlace"))
 const getSearchLatLng = searchPlace ?  searchPlace.map( (value) => value.geometry.location) : "";
 console.log(searchPlace);
-
-// convertion class
 
 
 //UI  class
@@ -45,7 +43,8 @@ class UI {
       let localCondition = [
           {
               name: weather[0].main,
-              value: main.temp
+              value:  main.temp,
+              type: "temp"
           },
           {
               name: "wind",
@@ -69,13 +68,19 @@ class UI {
           }
       }
 
+      const id = (type) => {
+        if(type === "temp"){
+          return 'weather'
+        }
+      }
+
       showLocalCondition.innerHTML = localCondition.map( (val, index) => {
           return `
               <li>
                 <img src="${image(val.name)}">
                 <div>
                   <p>${val.name}</p>
-                  <p class="val">${val.value}</p>
+                  <p id="${id(val.type)}" class="val">${val.value}</p>
                 </div>
               </li>
           `
@@ -108,7 +113,8 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: view().lat, lng: view().lng},
-    zoom: 17
+    zoom: 17,
+    zoomControl: true
   });
 
   var marker = new google.maps.Marker({
@@ -117,7 +123,7 @@ function initMap() {
       lng: view().lng
     },
     map: map,
-    // draggable = true
+    draggable: true
   
   });
 
@@ -153,6 +159,7 @@ backToCurrentLocationBtn.addEventListener('click', function () {
   sessionStorage.setItem('place', null);
   location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/index.html')
 })
+
 
 
 

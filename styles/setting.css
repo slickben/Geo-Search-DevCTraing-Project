@@ -1,0 +1,59 @@
+.setting {
+    position: absolute;
+    left: 75%;
+    bottom: 20%;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    padding: 30px 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+.hide {
+    display: none
+}
+
+.covertionBtnGroup {
+    /* border: 1px solid rgba(0, 0, 0, 0.685);  */
+    width: 270px;
+    display: flex;
+    /* border-radius: 10px; */
+}
+
+.covertionBtnGroup button {
+    width: 50%;
+    padding: 7px 7px;
+    outline: none;
+    font-size: 15px
+}
+
+.covertionBtnGroup .rightBtn{
+    border-radius: 0px 6px 6px 0px;
+    background-color: #fff;
+}
+
+.covertionBtnGroup .leftBtn {
+    border-radius: 6px 0px 0px 6px;
+    background-color: rgba(41, 39, 39, 0.534);
+    color: #fff;
+}
+
+.covertionBtnGroup button img {
+    width: 15px;
+}
+
+.settingToggle {
+    position: absolute;
+    left: 94%;
+    bottom: 12%;  
+}
+
+.settingToggle img {
+    width: 40px;
+    filter: opacity(70%)
+}
+
+
+
+

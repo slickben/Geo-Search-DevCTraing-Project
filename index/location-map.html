@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/location.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/setting.css">
 </head>
 <body>
     <div class="container">
@@ -18,6 +19,15 @@
                 </header>
                 <div id="map"></div>
             </section>
+            <div class="hide" id="toggle">
+                <div class="covertionBtnGroup">
+                    <button class="leftBtn" id="convertToCelsius" type="submit"><img src="../icons/svg/024-hot-1.svg" alt="" set=""> celsius</button>
+                    <button class="rightBtn" id="convertToFahrenheit" type="submit"><img src="../icons/svg/024-hot-1.svg" alt="" srcset="">fahrenheit</button>
+                </div>
+            </div>
+            <div class="settingToggle" >
+                <img id="toggleBtn" src="../icons/svg/cog-wheel-silhouette.svg" alt="" srcset="">
+            </div>
         </main>
         <aside>
             <header>
@@ -59,16 +69,10 @@
                 </article>
             </section>
         </aside>
-        <footer>
-            <div class="setting">
-                <div class="covertionBtnGroup">
-                    <button type="submit">celsius</button>
-                    <button type="submit">fahrenheit</button>
-                </div>
-            </div>
-        </footer>
     </div>
+    <script src="../Script/toggle.js"></script>
     <script src="../Script/location-map.js"></script>
+    <script src="../Script/covertion.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg0c1yJefuxjJHbV_lp_fz6BuYT53PXKc&libraries=places&callback=initMap">
     </script>
