@@ -8,6 +8,7 @@
     padding: 30px 10px;
     border-radius: 10px;
     display: block;
+    box-shadow: rgb(0, 0, 0)  3px 3px 20px 
 }
 
 .hide {

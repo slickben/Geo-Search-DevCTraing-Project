@@ -94,7 +94,7 @@ function  actvitePlaceSearch () {
     google.maps.event.addListener(searchBox, 'places_changed', function(){
         console.log(searchBox.getPlaces());  
         sessionStorage.setItem("place", JSON.stringify(searchBox.getPlaces()))
-        location.replace("http://127.0.0.1:5500/Geo-Search/Geo-Search-DevCTraing-Project/index/location-map.html")
+        location.replace("http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/location-map.html")
 
     })
 }

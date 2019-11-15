@@ -16,9 +16,8 @@ const convertToCelsiusFunc = () => {
         const convertToCelsius  = saveToFahrenheit * 9 / 5 + 32;
         saveToCelsius = convertToCelsius;
         weatherTemp  = saveToCelsius;
-        console.log(tempElem)
         tempElem.innerText = weatherTemp
-        console.log(weatherTemp)
+        
     }
     return
     
@@ -30,9 +29,7 @@ const convertToFahrenheitFunc = () => {
     const convertToFahrenheit  = (main.temp -32) * 5 / 9;
     saveToFahrenheit = convertToFahrenheit;
     weatherTemp = convertToFahrenheit;
-    console.log(tempElem)
     tempElem.innerText = weatherTemp
-    console.log(weatherTemp)
 
 }
 

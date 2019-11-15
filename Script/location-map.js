@@ -157,7 +157,7 @@ function initMap() {
 //go back to current location func
 backToCurrentLocationBtn.addEventListener('click', function () {
   sessionStorage.setItem('place', null);
-  location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/index.html')
+  location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index.html')
 })
 
 

@@ -16,34 +16,28 @@
 }
 
 main {
-     /* background-color: aqua; */
      grid-area: main;
-     height: 95vh;
-     /* border: 2px solid rgba(0, 0, 0, 0.116); */
-     /* border-radius: 5px */
+     /* height: 95vh; */
+
 }
 
 main .map {
-    height: 100vh;
-    /* background-image: url('../images/7.jpg'); */
-    /* background-position: center; */
-    /* background-size: cover; */
-    /* margin: 0 15px; */
-    border-radius: 5px
+    /* height: 100vh;
+    border-radius: 5px */
 }
 
 main .map #map {
-    position: absolute;
-    height: 100vh;
+    position: absolute; 
+     height: 100vh;
     margin-top: -59px;
-    width: 76.7%;
-    z-index: -1;
+    width: 76.7%; 
+    /* z-index: -1; */
 }
 
 
 main header input {
     width:  60%;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 20px;
     font-family: "Font Awesome 5 Free", 'Source Sans Pro';
     font-weight: 900;
