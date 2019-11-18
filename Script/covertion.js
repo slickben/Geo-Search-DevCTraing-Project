@@ -11,7 +11,7 @@ let saveToCelsius;
 let saveToFahrenheit;
 //convert to celsius func
 const convertToCelsiusFunc = () => {
-    const tempElem = document.getElementById('weather')
+    const tempElem = document.getElementById('weather') 
     if(saveToFahrenheit){
         const convertToCelsius  = saveToFahrenheit * 9 / 5 + 32;
         saveToCelsius = convertToCelsius;
