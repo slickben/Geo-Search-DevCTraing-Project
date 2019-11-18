@@ -1,0 +1,22 @@
+{
+  "name": "geo-search-devctraing-project",
+  "version": "1.0.0",
+  "description": "A Web App Where You Can Search For Any Place/Location And View Map also See Local Weather etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slickben/Geo-Search-DevCTraing-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slickben/Geo-Search-DevCTraing-Project/issues"
+  },
+  "homepage": "https://github.com/slickben/Geo-Search-DevCTraing-Project#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
