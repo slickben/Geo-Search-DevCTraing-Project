@@ -92,12 +92,23 @@ function  actvitePlaceSearch () { // eslint-disable-line
     let searchBox = new google.maps.places.SearchBox(input); // eslint-disable-line
 
     google.maps.event.addListener(searchBox, 'places_changed', function(){ // eslint-disable-line
-        console.log(searchBox.getPlaces());  
+        let photoArr = [];
+        let places =  searchBox.getPlaces();
+        let photos = places.map(value => value.photos) //eslint-disable-line
+        photos[0].map( value => {
+            let photoUrl = value.getUrl({maxWidth: 400, maxHeight: 400});
+            photoArr.push(photoUrl);
+        });
+
+        localStorage.setItem('photo', JSON.stringify(photoArr));
+        
         sessionStorage.setItem('place', JSON.stringify(searchBox.getPlaces()));
-        location.replace('https://slickben.github.io/Geo-Search-DevCTraing-Project/index/location-map.html');
+        location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/location-map.html');
 
     });
 }
+//https://slickben.github.io/Geo-Search-DevCTraing-Project/index/location-map.html
+//http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index.html
 
 
 getCurrentLocation();

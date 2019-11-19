@@ -141,7 +141,13 @@ function initMap() { // eslint-disable-line
       sessionStorage.setItem('place', JSON.stringify(searchBox.getPlaces()));
       let places =  searchBox.getPlaces();
       let bounds = new google.maps.LatLngBounds(); // eslint-disable-line
-
+      let photoArr = [];
+      let photos = places.map(value => value.photos)   //eslint-disable-line
+      photos[0].map( value => {
+        let photoUrl = value.getUrl({maxWidth: 400, maxHeight: 400});
+        photoArr.push(photoUrl);
+      });
+      localStorage.setItem('photo', JSON.stringify(photoArr));
       places.map( (place) => {
         console.log(place.geometry);
         bounds.extend(place.geometry.location);
@@ -165,7 +171,7 @@ function initMap() { // eslint-disable-line
 //go back to current location func
 backToCurrentLocationBtn.addEventListener('click', function () {
   sessionStorage.setItem('place', null);
-  location.replace('https://slickben.github.io/Geo-Search-DevCTraing-Project/');
+  location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index.html');
 });
 
 
