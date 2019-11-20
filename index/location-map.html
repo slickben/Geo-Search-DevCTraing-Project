@@ -18,6 +18,12 @@
                     <input id="search-input" type="search" name="" placeholder="&#xf3c5 Search for places and location" id="">
                 </header>
                 <div id="map"></div>
+                <div id="preveiwImg">
+                    <div class="imgControl">
+                        <a href="#" id="previousImgBtn" class="previous round">&#8249;</a>
+                        <a href="#" id="nextImgBtn" class="next round">&#8250;</a>
+                    </div>
+                </div>
             </section>
             <div class="hide" id="toggle">
                 <div class="covertionBtnGroup">
@@ -38,7 +44,7 @@
             <section class="info">
                 <article>
                     <div class="top">
-                        <p id="placename"></p>
+                            <p id="placename"></p>
                         <div>
                             <img src="../icons/svg/share.svg" alt="" srcset=""> 
                             <a  id="share" type="submit" rel="noopener noreferrer">Share</a>
@@ -51,21 +57,23 @@
                     </div>
                 </article>
             </section>
-            <section>
-                <article class="one">
+            <section class="land-mark">
+                <article class="noteable-land-marks">
+                    <div class="land-mark-header">
+                        <p>noteable land marks</p>
+                    </div>
+                    <div class="land-mark-images" id="noteableLMImg">
+                       <div class="overlay"><p id="imageNumber"></p></div>
+                    </div>
 
                 </article>
-                <article class="two">
-                    
-                </article>
-                <article class="three">
-                    
-                </article>
-                <article class="four">
-                    
-                </article>
-                <article class="five">
-                    
+                <article class="place">
+                        <div class="place-header" >
+                            <p>place</p>
+                        </div>
+                        <div class="place-image">
+                            
+                        </div>
                 </article>
             </section>
         </aside>

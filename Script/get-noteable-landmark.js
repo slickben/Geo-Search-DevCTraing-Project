@@ -1,15 +1,45 @@
-// // https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?app_id={YOUR_APP_ID}&app_code={YOUR_APP_CODE}&mode=retrieveLandmarks&prox=37.7442,-119.5931,1000
+// get photo from session storage 
+let photo = JSON.parse(sessionStorage.getItem('photo'));
 
-let getSearchName = searchPlace ?  searchPlace.map( (value) => // eslint-disable-line
-value.url) : ""; // eslint-disable-line quotes
-
-const getPlacePhoto = () => {
-    if(searchPlace){ //eslint-disable-line
-        let photo = searchPlace.photos  //eslint-disable-line
-        // photo[0].getUrl({maxWidth: 35, maxHeight: 35});
+//show single image of noteable land mark
+function showSingleNoteableLandMarkPicFunc() {
+    if(photo){
+        let imgUrl = photo[0];
+        let imgnumber = photo.length;
+        UI.showSingleImageOfNoteableLandMark(imgUrl, imgnumber); //eslint-disable-line
     }
-};
+    return;
+    
+}
 
-getPlacePhoto();
+let count = 1;
+function  nextImgFunc() {
+    count ++;
+    let imgUrl = photo[count];
+    UI.showPreviewImg(imgUrl);//eslint-disable-line
+    
+}
+
+function previousImgFunc() {
+    
+   if(count > 0) {
+    console.log(count);
+    count --;
+    console.log(count);
+    let imgUrl = photo[count];
+    UI.showPreviewImg(imgUrl);//eslint-disable-line
+   }
+}
+
+function preveiwImgFunc() {
+    let imgUrl = photo[0];
+    UI.showPreviewImg(imgUrl); //eslint-disable-line
+} 
+
+
+showSingleNoteableLandMarkPicFunc();
+noteableLMImgElem.addEventListener('click', preveiwImgFunc);//eslint-disable-line
+nextImgBtn.addEventListener('click', nextImgFunc);//eslint-disable-line
+previousImgBtn.addEventListener('click', previousImgFunc);//eslint-disable-line
 
 

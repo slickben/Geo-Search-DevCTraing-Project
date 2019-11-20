@@ -21,21 +21,53 @@ main {
 
 }
 
-main .map {
-    /* height: 100vh;
-    border-radius: 5px */
-}
 
 main .map #map {
     position: absolute; 
-     height: 100vh;
+     height: 94vh;
     margin-top: -59px;
-    width: 76.7%; 
+    width: 76.1%; 
+    box-sizing: border-box;
     /* z-index: -1; */
 }
 
+main #preveiwImg {
+    position: absolute; 
+     height: 94vh;
+    margin-top: -59px;
+    width: 76.1%; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-image: url('../images/237787_17062113450053930117.jpg');
+    background-position: center;
+    background-size: cover;
+    display: none
+}
+
+main #preveiwImg .imgControl {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 50%;
+}
+
+main #preveiwImg .imgControl a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 10px;
+    background-color: rgb(37, 41, 37);
+    color: white;
+}
+
+main #preveiwImg .imgControl a:hover{
+    background-color: rgba(77, 74, 74, 0.527);
+}
 
 main header input {
+    /* position: absolute; */
+    /* z-index: 5; */
     width:  60%;
     margin-top: 30px;
     margin-left: 20px;
@@ -87,12 +119,27 @@ aside .places-aside-head div{
     background-image: url('../images/Rhapsodys.jpg');
 }
 
+aside .land-mark {
+    position: relative;
+    top: -8%
+    
+}
+
+aside .land-mark .land-mark-header, .place-header {
+    margin: 0 13px;
+}
+
+aside .land-mark-header, .place-header p {
+    text-transform: uppercase;
+    font-size: 13px
+}
+
 aside section {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #fff;
-    max-height: 260px;
-    height: 400px;
+    max-height: 320px;
+    height: 650px;
     scrollbar-width: thin;
 
 }
@@ -107,7 +154,7 @@ aside section::-webkit-scrollbar-thumb {
 }
 
 
-aside section article {
+aside section .land-mark-images, .place-image{
     height: 120px;
     background-color: rgb(211, 76, 76);
     /* border: 1px solid black; */
@@ -115,41 +162,26 @@ aside section article {
     border-radius: 5px
 }
 
-aside section .one {
-    background-image: url('../images/1.jpg');
+.land-mark-images  {
     background-position: center;
-    background-size: cover;
+    background-size: cover
 }
 
-aside section .two {
-background-image: url('../images/1fdc6fcf.jpg');
-background-position: center;
-    background-size: cover;
-}
-aside section .three {
-    background-image: url('../images/IKEJA-CITY-MALL.jpg');
-    background-position: center;
-    background-size: cover;
-}
-aside section .four {
-    background-image: url('../images/Johnson-Jakande-Tinubu-JJT-Park-Alausa-Ikeja-for-the-Easter-celebration-BRAND-SPUR-NIGERIA-2.jpg');
-    background-position: center;
-    background-size: cover;
-
-}
-aside section .five {
-    background-image: url(../images/Rhapsodys.jpg);
-    background-position: center;
-    background-size: cover;
+.land-mark-images p {
+    color: #F5F5F5;
+    text-transform: uppercase;
+    
 }
 
 aside .info {
-    /* max-width: 200px; */
+    position: relative;
+    top: -5%;
+    margin: 10px 10px;
+    border-radius: 5px;
     overflow: hidden;
     height: 140px;
-    margin-top: -40px;
-    /* z-index: 5; */
-    background-color: rgba(255, 255, 255, 0);
+    /* margin-top: -40px; */
+    background-color: rgb(255, 255, 255);
 }
 
 aside .info article {
@@ -191,7 +223,8 @@ aside .info .top  {
     display:  flex; 
     justify-content: space-between;
     /* grid-template-collum:  */
-    margin: 5px 10px 30px 10px 
+    margin: 5px 10px 30px 10px ;
+    box-sizing: border-box;
 }
 
 aside .info .buttom ul { 
@@ -203,6 +236,16 @@ aside .info .buttom ul li {
     display: flex;
     list-style: none;
     padding: 0 5px
+}
+
+aside #noteableLMImg .overlay {
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 30px;
+    width: 94%;
+    box-sizing: border-box;
+    position:  absolute;
+    top: 36%;
+    box-shadow: 0 -10px 30px
 }
 
 aside .info .buttom ul li  img{

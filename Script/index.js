@@ -95,12 +95,13 @@ function  actvitePlaceSearch () { // eslint-disable-line
         let photoArr = [];
         let places =  searchBox.getPlaces();
         let photos = places.map(value => value.photos) //eslint-disable-line
-        photos[0].map( value => {
-            let photoUrl = value.getUrl({maxWidth: 400, maxHeight: 400});
+        console.log(photos);
+        photos[0] != undefined ? photos[0].map( value => {
+            let photoUrl = value.getUrl({maxWidth: 800, maxHeight: 400});
             photoArr.push(photoUrl);
-        });
+        }) : '';
 
-        localStorage.setItem('photo', JSON.stringify(photoArr));
+        sessionStorage.setItem('photo', JSON.stringify(photoArr));
         
         sessionStorage.setItem('place', JSON.stringify(searchBox.getPlaces()));
         location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/location-map.html');

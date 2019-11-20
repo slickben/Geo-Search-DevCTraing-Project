@@ -1,12 +1,16 @@
-//LG_vdj7d_X166xoJthaRIDod8BRqrHwoUc481tJ6AGk api key
-// 71Eoa6rHwrq47vTSM0nH
-//APP ID
+
 
 //dom Elements
 const backToCurrentLocationBtn = document.getElementById('backToCurrentLocation');
 let input = document.getElementById('search-input');
 const showLocalCondition = document.getElementById('local-condition');
 const placeName = document.getElementById('placename');
+const noteableLMImgElem = document.getElementById('noteableLMImg');
+const imageNumberElem = document.getElementById('imageNumber');
+const preveiwImgElem = document.getElementById('preveiwImg');
+const mapElem = document.getElementById('map');
+const previousImgBtn =document.getElementById('previousImgBtn');//eslint-disable-line
+const nextImgBtn =document.getElementById('nextImgBtn');//eslint-disable-line
 
 //get weather data
 const getLocationWeatherData = (lat, lng,) => {
@@ -40,6 +44,20 @@ class UI {
   }
   static showNameOfLocation  ({name})  {
     placeName.innerText = name;
+  }
+  static showSingleImageOfNoteableLandMark (imgUrl, imageNumber) {
+    noteableLMImgElem.style.backgroundImage = 'url('+imgUrl+')' ;
+    imageNumberElem.innerText = imageNumber + ' photos';
+  }
+  static showPreviewImg  (pImgSrc) {
+    mapElem.style.display = 'none';
+    preveiwImgElem.style.display = 'block';
+    preveiwImgElem.style.backgroundImage = 'url('+pImgSrc+')';
+
+  }
+  static hidePreviewImg () {
+    mapElem.style.display = 'block';
+    preveiwImgElem.style.display = 'none';
   }
   static showLocalCondition  ({main, wind, weather})  {
       let localCondition = [
@@ -141,13 +159,16 @@ function initMap() { // eslint-disable-line
       sessionStorage.setItem('place', JSON.stringify(searchBox.getPlaces()));
       let places =  searchBox.getPlaces();
       let bounds = new google.maps.LatLngBounds(); // eslint-disable-line
+
+
       let photoArr = [];
       let photos = places.map(value => value.photos)   //eslint-disable-line
       photos[0].map( value => {
         let photoUrl = value.getUrl({maxWidth: 400, maxHeight: 400});
         photoArr.push(photoUrl);
       });
-      localStorage.setItem('photo', JSON.stringify(photoArr));
+      sessionStorage.setItem('photo', JSON.stringify(photoArr));
+
       places.map( (place) => {
         console.log(place.geometry);
         bounds.extend(place.geometry.location);
