@@ -11,6 +11,7 @@ const preveiwImgElem = document.getElementById('preveiwImg');
 const mapElem = document.getElementById('map');
 const previousImgBtn =document.getElementById('previousImgBtn');//eslint-disable-line
 const nextImgBtn =document.getElementById('nextImgBtn');//eslint-disable-line
+const clearImgBtn =document.getElementById('clearImgBtn');//eslint-disable-line
 
 //get weather data
 const getLocationWeatherData = (lat, lng,) => {
@@ -50,13 +51,15 @@ class UI {
     imageNumberElem.innerText = imageNumber + ' photos';
   }
   static showPreviewImg  (pImgSrc) {
+    input.style.display = 'none';
     mapElem.style.display = 'none';
     preveiwImgElem.style.display = 'block';
     preveiwImgElem.style.backgroundImage = 'url('+pImgSrc+')';
 
   }
-  static hidePreviewImg () {
+  static clearPreviewImg () {
     mapElem.style.display = 'block';
+    input.style.display = 'block';
     preveiwImgElem.style.display = 'none';
   }
   static showLocalCondition  ({main, wind, weather})  {
@@ -192,7 +195,7 @@ function initMap() { // eslint-disable-line
 //go back to current location func
 backToCurrentLocationBtn.addEventListener('click', function () {
   sessionStorage.setItem('place', null);
-  location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index.html');
+  location.replace('https://slickben.github.io/Geo-Search-DevCTraing-Project/');
 });
 
 

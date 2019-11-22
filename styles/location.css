@@ -25,8 +25,8 @@ main {
 main .map #map {
     position: absolute; 
      height: 94vh;
-    margin-top: -59px;
-    width: 76.1%; 
+    top: 2%;
+    width: 76%; 
     box-sizing: border-box;
     /* z-index: -1; */
 }
@@ -34,8 +34,8 @@ main .map #map {
 main #preveiwImg {
     position: absolute; 
      height: 94vh;
-    margin-top: -59px;
-    width: 76.1%; 
+    margin-top: 6px;
+    width: 72%; 
     box-sizing: border-box;
     border-radius: 10px;
     background-image: url('../images/237787_17062113450053930117.jpg');
@@ -44,12 +44,29 @@ main #preveiwImg {
     display: none
 }
 
+main #preveiwImg .cancle {
+    width: 100%;
+    
+}
+
+main #preveiwImg .cancle a {
+    float: right;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 30px;
+    color: rgb(255, 5, 5);
+    padding: 3px 20px;
+    background-color: rgb(9, 13, 20);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 main #preveiwImg .imgControl {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    top: 50%;
+    top: 36%;
 }
 
 main #preveiwImg .imgControl a {
@@ -66,11 +83,11 @@ main #preveiwImg .imgControl a:hover{
 }
 
 main header input {
-    /* position: absolute; */
-    /* z-index: 5; */
+    position: relative;
+    z-index: 3;
     width:  60%;
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
     font-family: "Font Awesome 5 Free", 'Source Sans Pro';
     font-weight: 900;
     font-size: 20px;

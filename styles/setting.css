@@ -18,6 +18,7 @@
 .covertionBtnGroup {
     /* border: 1px solid rgba(0, 0, 0, 0.685);  */
     width: 270px;
+    max-width: 270PX;
     display: flex;
     /* border-radius: 10px; */
 }

@@ -104,7 +104,7 @@ function  actvitePlaceSearch () { // eslint-disable-line
         sessionStorage.setItem('photo', JSON.stringify(photoArr));
         
         sessionStorage.setItem('place', JSON.stringify(searchBox.getPlaces()));
-        location.replace('http://127.0.0.1:5500/Geo-Search-DevCTraing-Project/index/location-map.html');
+        location.replace('https://slickben.github.io/Geo-Search-DevCTraing-Project/index/location-map.html');
 
     });
 }

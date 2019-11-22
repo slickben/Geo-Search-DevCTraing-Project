@@ -17,15 +17,16 @@ function  nextImgFunc() {
     count ++;
     let imgUrl = photo[count];
     UI.showPreviewImg(imgUrl);//eslint-disable-line
+    if(count == photo.length){
+        count = 0;
+    }
     
 }
 
 function previousImgFunc() {
     
    if(count > 0) {
-    console.log(count);
     count --;
-    console.log(count);
     let imgUrl = photo[count];
     UI.showPreviewImg(imgUrl);//eslint-disable-line
    }
@@ -36,10 +37,15 @@ function preveiwImgFunc() {
     UI.showPreviewImg(imgUrl); //eslint-disable-line
 } 
 
+function  clearImgFunc() {
+    UI.clearPreviewImg()
+}
+
 
 showSingleNoteableLandMarkPicFunc();
 noteableLMImgElem.addEventListener('click', preveiwImgFunc);//eslint-disable-line
 nextImgBtn.addEventListener('click', nextImgFunc);//eslint-disable-line
 previousImgBtn.addEventListener('click', previousImgFunc);//eslint-disable-line
+clearImgBtn.addEventListener('click', clearImgFunc);//eslint-disable-line
 
 
