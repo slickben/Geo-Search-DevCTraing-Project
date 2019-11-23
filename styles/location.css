@@ -155,7 +155,7 @@ aside section {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #fff;
-    max-height: 320px;
+    max-height: 300px;
     height: 650px;
     scrollbar-width: thin;
 

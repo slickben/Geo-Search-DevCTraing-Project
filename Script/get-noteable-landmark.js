@@ -38,7 +38,7 @@ function preveiwImgFunc() {
 } 
 
 function  clearImgFunc() {
-    UI.clearPreviewImg()
+    UI.clearPreviewImg();//eslint-disable-line
 }
 
 
