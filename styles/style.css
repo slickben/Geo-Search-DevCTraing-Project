@@ -134,3 +134,45 @@ section {
 .more-info ul li span {
     font-size: 15px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .search-sec  form input {
+        min-width: 70%;
+        margin-left: 14%;
+        /* padding: 0 20%; */
+        padding: 0 20px;
+    }
+    .search-sec  form input::placeholder {
+        padding:  10px ;
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 700
+    }
+    .more-info ul {
+        display: block;
+        /* justify-content: center; */
+        color: #565656
+    } 
+    
+    .more-info ul li {
+        list-style: none;
+        margin: 0 40px;
+    }
+    .more-info ul li h1 {
+        font-size: 25px
+    }
+
+    .more-info ul li p {
+        text-transform: uppercase;
+    }
+    
+    .more-info ul li .box {
+        display:  flex;
+        float: right;
+        margin-left: 80px;
+    }
+    .more-info ul li span {
+        font-size: 15px;
+    }
+}

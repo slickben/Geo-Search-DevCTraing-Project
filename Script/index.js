@@ -39,7 +39,7 @@ class UI {
             }
         };
 
-        showLocalCondition.innerHTML = localCondition.map( (val, ) => {
+        showLocalCondition.innerHTML = localCondition.map( (val) => {
             return `
                 <li>
                     <div class="box">
@@ -47,8 +47,7 @@ class UI {
                         <span>${symbol(val.name)}</span>
                     </div>
                     <p>${val.name}</p>
-                </li>
-            `;
+                </li>`;
         });
     }
 }

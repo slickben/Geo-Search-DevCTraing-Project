@@ -1,0 +1,209 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) { 
+    .container {
+        display:  grid;
+        grid-template-areas: 
+        ' main'
+        ' main'
+        ' main'
+        ' main'
+        'aside';
+    }
+    main {
+        grid-area: main
+    }
+    aside {
+        grid-area: aside;
+        height: 200px;
+    }
+    main .map #map {
+        position: relative !important;
+        margin-top: -110px;
+        margin-left: 10px;
+        width: 98%; 
+        height: 50vh;
+        box-sizing: border-box;
+    }
+
+
+    main #preveiwImg {
+        margin-left: 20px;
+        position: unset !important;
+        width: 94%; 
+        height: 50vh;
+        box-sizing: border-box;
+    }
+    aside header  {
+        /* display: none; */
+        display: block !important;
+        height: 200px;
+    }
+    .setting {
+        position: absolute;
+        left: 40%;
+        bottom: 60%;
+        height: 40px;
+    }
+    .covertionBtnGroup {
+        /* border: 1px solid rgba(0, 0, 0, 0.685);  */
+        width: 270px;
+        max-width: 190PX;
+        display: flex;
+        /* border-radius: 10px; */
+    }
+    .covertionBtnGroup button {
+        width: 50%;
+        padding: 3px 7px;
+        outline: none;
+        font-size: 10px
+    }
+    .settingToggle {
+        position: absolute;
+        left: 91%;
+        bottom: 70%;  
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        display:  grid;   
+    }
+    aside section {
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+        max-height: 300px;
+        height: 650px;
+    }
+    main .map #map {
+        position: absolute !important;
+        width: 69%; 
+        height: 94vh;
+    }
+    aside   {
+        display: block;
+        position: initial
+        /* height: 94vh; */
+    }
+    aside header  {
+        display: block;
+    }
+    .setting {
+        left: 
+        69%;
+        bottom: 20%;
+        height: 100px;
+
+    }
+
+    .covertionBtnGroup {
+        /* border: 1px solid rgba(0, 0, 0, 0.685);  */
+        width: 200px;
+        max-width: 270PX;
+        display: flex;
+        /* border-radius: 10px; */
+    }
+    
+    .covertionBtnGroup button {
+        width: 50%;
+        padding: 7px 7px;
+        outline: none;
+        font-size: 15px
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {  
+    .container {
+        display:  grid;   
+    }
+    aside section {
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+        max-height: 300px;
+        height: 650px;
+    }
+    main .map #map {
+        width: 72%; 
+        height: 94vh;
+    } 
+    aside   {
+        display: block;
+        position: initial
+    }
+    aside header  {
+        display: block;
+    }
+    .setting {
+        left: 74%;
+        bottom: 20%;
+        height: 100px;
+
+    }
+    .covertionBtnGroup {
+        /* border: 1px solid rgba(0, 0, 0, 0.685);  */
+        width: 230px;
+        max-width: 270PX;
+        display: flex;
+        /* border-radius: 10px; */
+    }
+    
+    .covertionBtnGroup button {
+        width: 50%;
+        padding: 7px 7px;
+        outline: none;
+        font-size: 15px
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        display:  grid;   
+    }
+    aside section {
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+        max-height: 300px;
+        height: 650px;
+    }
+    aside header  {
+        display: block;
+    }
+    aside   {
+        display: block;
+        position: initial
+    }
+    main .map #map {
+        width: 74%; 
+        height: 94vh;
+    } 
+    .setting {
+        left: 74%;
+        bottom: 20%;
+        height: 100px;
+
+    }
+    .covertionBtnGroup {
+        /* border: 1px solid rgba(0, 0, 0, 0.685);  */
+        width: 270px;
+        max-width: 270PX;
+        display: flex;
+        /* border-radius: 10px; */
+    }
+    
+    .covertionBtnGroup button {
+        width: 50%;
+        padding: 7px 7px;
+        outline: none;
+        font-size: 15px
+    }
+}

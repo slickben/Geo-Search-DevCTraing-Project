@@ -9,7 +9,6 @@
     grid-template-areas: 
         'aside aside main main main main main main main main main main'
         'aside aside main main main main main main main main main main'
-        'aside aside footer footer footer footer footer footer footer footer footer footer'
         ;
     gap: 5px;
 
