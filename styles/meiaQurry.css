@@ -21,7 +21,7 @@
         margin-top: -110px;
         margin-left: 10px;
         width: 98%; 
-        height: 50vh;
+        height: 80vh;
         box-sizing: border-box;
     }
 
@@ -31,12 +31,16 @@
         position: unset !important;
         width: 94%; 
         height: 50vh;
-        box-sizing: border-box;
+        /* min-height: 70vh; */
+        box-sizing: border-box
     }
     aside header  {
         /* display: none; */
         display: block !important;
-        height: 200px;
+        height: 70px;
+    }
+    aside header div {
+        height: 0px;
     }
     .setting {
         position: absolute;
@@ -60,7 +64,15 @@
     .settingToggle {
         position: absolute;
         left: 91%;
-        bottom: 70%;  
+        bottom: 50%;  
+    }
+    main header input {
+        position: relative;
+        margin-top: 10px;
+        z-index: 3;
+        width:  95%;
+        font-size: 20px;
+        
     }
 }
 
