@@ -1,5 +1,40 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 320px) {
+    
+}
+
+@media only screen and (max-width: 425px) {
+    main header input::placeholder {
+        font-size: 15px
+        
+    }
+    .setting {
+        left: 3% !important;
+        bottom: 10% !important;
+        width: 150px !important;
+        height: 10px !important;
+    }
+    .covertionBtnGroup button img {
+        width: 10px;
+    }
+    main .map #map {
+        height: 90vh !important;
+        width: 95% !important;
+    }
+    .settingToggle {
+        left: 85.7% !important;
+        bottom: -4% !important;  
+    }
+    .covertionBtnGroup button {
+        padding: 4px 4px;
+        font-size: 10px;
+        width: 40% !important;
+    }
+    main .map #map {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 766px) { 
     .container {
         display:  grid;
         grid-template-areas: 
@@ -18,9 +53,9 @@
     }
     main .map #map {
         position: relative !important;
-        margin-top: -110px;
+        margin-top: -53px;
         margin-left: 10px;
-        width: 98%; 
+        width: 97%; 
         height: 80vh;
         box-sizing: border-box;
     }
@@ -44,8 +79,8 @@
     }
     .setting {
         position: absolute;
-        left: 40%;
-        bottom: 60%;
+        left: 1%;
+        bottom: 20%;
         height: 40px;
     }
     .covertionBtnGroup {
@@ -63,12 +98,12 @@
     }
     .settingToggle {
         position: absolute;
-        left: 91%;
-        bottom: 50%;  
+        left: 88%;
+        bottom: 11%;  
     }
     main header input {
         position: relative;
-        margin-top: 10px;
+        margin-top: 20px;
         z-index: 3;
         width:  95%;
         font-size: 20px;
@@ -85,6 +120,12 @@
 @media only screen and (min-width: 768px) {
     .container {
         display:  grid;   
+    }
+    .settingToggle {
+        bottom: 35%;  
+    }
+    .map header input::placeholder {
+        font-size: 15px;
     }
     aside section {
         overflow-y: auto;
@@ -107,8 +148,7 @@
         display: block;
     }
     .setting {
-        left: 
-        69%;
+        left:69%;
         bottom: 20%;
         height: 100px;
 
@@ -134,6 +174,9 @@
 @media only screen and (min-width: 992px) {  
     .container {
         display:  grid;   
+    }
+    .map header input::placeholder {
+        font-size: 25px;
     }
     aside section {
         overflow-y: auto;
