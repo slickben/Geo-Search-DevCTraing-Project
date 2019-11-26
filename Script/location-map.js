@@ -68,16 +68,18 @@ class UI {
       let localCondition = [
           {
               name: weather[0].main,
-              value:  main.temp,
+              value:  main.temp - 273.15 ,
               type: 'temp'
           },
           {
               name: 'wind',
-              value: wind.speed
+              value: wind.speed,
+              type: 'wind'
           },
           {
               name: 'humidity',
-              value: main.humidity
+              value: main.humidity,
+              type: 'humidity'
           }
       ];
 
@@ -110,6 +112,15 @@ class UI {
           return 'weather';
         }
       };
+      const symbol = (type) => {
+        if(type === 'temp'){
+            return '\xB0C.';
+        }else if(type === 'wind') {
+            return 'm/s';
+        }else if(type === 'humidity') {
+            return '%';
+        }
+    };
 
       showLocalCondition.innerHTML = localCondition.map( (val,) => {
           return `
@@ -117,7 +128,11 @@ class UI {
                 <img src="${image(val.name)}">
                 <div>
                   <p id="name">${val.name}</p>
-                  <p id="${id(val.type)}" class="val">${val.value}</p>
+                  <div>
+                    <p id="${id(val.type)}" class="val">${val.value}</p>
+                    <span>${symbol(val.type)}</span>
+                  </div>
+                  
                 </div>
               </li>
           `;

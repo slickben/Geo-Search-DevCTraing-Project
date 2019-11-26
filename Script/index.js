@@ -17,7 +17,7 @@ class UI {
         let localCondition = [
             {
                 name: 'temperature',
-                value: main.temp
+                value: main.temp - 273.15
             },
             {
                 name: 'wind speed',

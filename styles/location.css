@@ -260,12 +260,16 @@ aside #noteableLMImg .overlay {
     width: 94%;
     box-sizing: border-box;
     position:  absolute;
-    top: 36%;
+    top: 39.1%;
     box-shadow: 0 -10px 30px
 }
 
 aside .info .buttom ul li  img{
     width: 35px
+}
+
+aside .info .buttom ul li  div div{
+    display: flex;
 }
 
 aside .info .buttom ul li div p{
