@@ -21,8 +21,8 @@
         width: 95% !important;
     }
     .settingToggle {
-        left: 85.7% !important;
-        bottom: -4% !important;  
+        left: 85% !important;
+        bottom: -13% !important;  
     }
     .covertionBtnGroup button {
         padding: 4px 4px;
@@ -121,6 +121,18 @@
     .container {
         display:  grid;   
     }
+    aside .info .buttom ul li  img{
+        width: 20px
+    }
+    
+    aside .info .buttom ul li div p{
+        font-size: 0.6em;
+    }
+    
+    aside .info .buttom ul li div .val{
+        font-size: 14px;
+        font-weight: 600
+    }
     .settingToggle {
         bottom: 35%;  
     }
@@ -175,6 +187,14 @@
     .container {
         display:  grid;   
     }
+    aside .info .buttom ul li div p{
+        font-size: 0.8em
+    }
+    
+    aside .info .buttom ul li div .val{
+        font-size: 0.8em;
+        font-weight: 600
+    }
     .map header input::placeholder {
         font-size: 25px;
     }
@@ -222,6 +242,18 @@
 @media only screen and (min-width: 1200px) {
     .container {
         display:  grid;   
+    }
+    aside .info .buttom ul li  img{
+        width: 35px
+    }
+    
+    aside .info .buttom ul li div p{
+        font-size: 0.9em
+    }
+    
+    aside .info .buttom ul li div .val{
+        font-size: 1.3em;
+        font-weight: 600
     }
     aside section {
         overflow-y: auto;

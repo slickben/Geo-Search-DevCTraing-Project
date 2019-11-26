@@ -35,7 +35,9 @@ const currentPlace = JSON.parse(sessionStorage.getItem('currentPlace'));
  
 const getSearchLatLng = searchPlace ?  searchPlace.map( (value) => 
 value.geometry.location) : ""; // eslint-disable-line quotes
-console.log(searchPlace);
+const getSearchName = searchPlace ?  searchPlace.map( (value) => 
+value.name) : ""; // eslint-disable-line quotes
+console.log(getSearchName);
 
 
 //UI  class
@@ -44,7 +46,7 @@ class UI {
       this.weatherData = CurrentWeatherData;
   }
   static showNameOfLocation  ({name})  {
-    placeName.innerText = name;
+    placeName.innerText = !getSearchName ? name : getSearchName;
   }
   static showSingleImageOfNoteableLandMark (imgUrl, imageNumber) {
     noteableLMImgElem.style.backgroundImage = 'url('+imgUrl+')' ;
@@ -84,10 +86,22 @@ class UI {
               return '../icons/svg/014-cloudy.svg';
           }else if(type === 'wind') {
               return '../icons/svg/004-drop.svg';
-          }else if(type === 'humidit') {
+          }else if(type === 'humidity') {
               return '../icons/svg/001-wind.svg';
           }else if(type === 'Rain'){
               return '../icons/svg/006-rain.svg';
+          }else if(type === 'Clear'){
+              return '../icons/svg/day-clear-512.png';
+          }else if (type === 'Thunderstorm'){
+              return '../icons/svg/008-thunderstorm.svg';
+          }else if (type === 'Storm'){
+            return '../icons/svg/007-storm.svg';
+          }else if (type === 'Snow'){
+            return '../icons/svg/013-snow.svg';
+          }else if (type === 'Blizzard'){
+            return '../icons/svg/010-blizzard.svg';
+          }else if (type === 'Sun'){
+            return '../icons/svg/027-sun.svg';
           }
       };
 
@@ -102,7 +116,7 @@ class UI {
               <li>
                 <img src="${image(val.name)}">
                 <div>
-                  <p>${val.name}</p>
+                  <p id="name">${val.name}</p>
                   <p id="${id(val.type)}" class="val">${val.value}</p>
                 </div>
               </li>

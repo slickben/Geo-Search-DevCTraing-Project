@@ -86,6 +86,22 @@ const getLocationWeatherData = (lat, lng,) => {
 
 //autocomplete search
 function  actvitePlaceSearch () { // eslint-disable-line
+    // const currentPlace = JSON.parse(sessionStorage.getItem('currentPlace'));
+    // var pyrmont = new google.maps.LatLng(currentPlace.lng,currentPlace.lat);
+    // var request = {
+    //     location: pyrmont,
+    //     radius: ' 1',
+    //   };
+    
+    //   let service = new google.maps.places.PlacesService(placeName);
+    //   service.nearbySearch(request, callback);
+    
+    
+    // function callback(results, status) {
+    //   if (status == google.maps.places.PlacesServiceStatus.OK) {
+    //     console.log(results)
+    //   }
+    // }
     let autocomplete = new google.maps.places.Autocomplete(input); // eslint-disable-line
 
     let searchBox = new google.maps.places.SearchBox(input); // eslint-disable-line
@@ -99,6 +115,8 @@ function  actvitePlaceSearch () { // eslint-disable-line
             let photoUrl = value.getUrl({maxWidth: 800, maxHeight: 400});
             photoArr.push(photoUrl);
         }) : '';
+
+        
 
         sessionStorage.setItem('photo', JSON.stringify(photoArr));
         
