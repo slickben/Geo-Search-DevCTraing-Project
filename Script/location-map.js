@@ -68,7 +68,7 @@ class UI {
       let localCondition = [
           {
               name: weather[0].main,
-              value:  main.temp - 273.15 ,
+              value: Math.round(parseFloat(main.temp)- 273.15),
               type: 'temp'
           },
           {
@@ -112,6 +112,11 @@ class UI {
           return 'weather';
         }
       };
+      const tempClass = (type) => {
+        if(type === 'temp'){
+          return 'temp';
+        }
+      };
       const symbol = (type) => {
         if(type === 'temp'){
             return '\xB0C.';
@@ -130,9 +135,8 @@ class UI {
                   <p id="name">${val.name}</p>
                   <div>
                     <p id="${id(val.type)}" class="val">${val.value}</p>
-                    <span>${symbol(val.type)}</span>
+                    <span class="${tempClass(val.type)}">${symbol(val.type)}</span>
                   </div>
-                  
                 </div>
               </li>
           `;

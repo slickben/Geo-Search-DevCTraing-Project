@@ -3,15 +3,39 @@ const  placeName = document.getElementById('locationName');
 const  Currentweather = document.getElementById('weather');
 const showLocalCondition = document.getElementById('local-condition');
 let input = document.getElementById('search-input');
-
+const weatherImg = document.getElementById('weatherImg');
 //UI  class
 class UI {
     static showNameOfLocation ({name}) {
         placeName.innerText = name;
     }
     static showCurrentWeether ({weather})  {
+        const image = (type) => {
+            if(type === 'Clouds' || ''){
+                return './icons/svg/014-cloudy.svg';
+            }else if(type === 'wind') {
+                return './icons/svg/004-drop.svg';
+            }else if(type === 'humidity') {
+                return './icons/svg/001-wind.svg';
+            }else if(type === 'Rain'){
+                return './icons/svg/006-rain.svg';
+            }else if(type === 'Clear'){
+                return '../icons/svg/day-clear-512.png';
+            }else if (type === 'Thunderstorm'){
+                return './icons/svg/008-thunderstorm.svg';
+            }else if (type === 'Storm'){
+              return './icons/svg/007-storm.svg';
+            }else if (type === 'Snow'){
+              return './icons/svg/013-snow.svg';
+            }else if (type === 'Blizzard'){
+              return './icons/svg/010-blizzard.svg';
+            }else if (type === 'Sun'){
+              return './icons/svg/027-sun.svg';
+            }
+        };
         console.log(weather[0].main);
         Currentweather.innerText = weather[0].main;
+        weatherImg.setAttribute('src', `${image(weather[0].main)}`);
     }
     static showLocalCondition ({main, wind}) {
         let localCondition = [

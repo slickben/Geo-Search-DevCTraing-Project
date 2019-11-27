@@ -1,5 +1,7 @@
 @media only screen and (max-width: 320px) {
-    
+    aside .info .buttom ul li  img{
+        width: 25px
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -59,10 +61,8 @@
         height: 80vh;
         box-sizing: border-box;
     }
-
-
     main #preveiwImg {
-        margin-left: 20px;
+        margin-left: 10px;
         position: unset !important;
         width: 94%; 
         height: 50vh;
@@ -82,6 +82,29 @@
         left: 1%;
         bottom: 20%;
         height: 40px;
+    }
+    main #preveiwImg .cancle {
+        width: 100%;
+        
+    }
+    main #preveiwImg .imgControl a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 4px 14px;
+        border-radius: 10px;
+        background-color: rgb(37, 41, 37);
+        color: white;
+    }
+    main #preveiwImg .cancle a {
+        float: right;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 0 30px;
+        color: rgb(255, 5, 5);
+        padding: 1px 10px;
+        background-color: rgb(9, 13, 20);
+        border-radius: 10px;
+        margin-top: 10px;
     }
     .covertionBtnGroup {
         /* border: 1px solid rgba(0, 0, 0, 0.685);  */
