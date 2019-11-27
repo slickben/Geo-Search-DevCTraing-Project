@@ -272,6 +272,10 @@ aside .info .buttom ul li  div div{
     display: flex;
 }
 
+/* #placename {
+    max-width: 30%;
+} */
+
 aside .info .buttom ul li div p{
     font-size: 12px
 }

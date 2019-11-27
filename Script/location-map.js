@@ -37,7 +37,20 @@ const getSearchLatLng = searchPlace ?  searchPlace.map( (value) =>
 value.geometry.location) : ""; // eslint-disable-line quotes
 const getSearchName = searchPlace ?  searchPlace.map( (value) => 
 value.name) : ""; // eslint-disable-line quotes
-console.log(getSearchName);
+
+function nameFunc() {
+  if(getSearchName){
+    let NameToArr = getSearchName[0].split(' ');
+    let shotenName = NameToArr.slice(0, 2);
+    console.log(shotenName);
+    return shotenName;
+       
+  
+  }
+  return;
+}
+
+
 
 
 //UI  class
@@ -46,7 +59,7 @@ class UI {
       this.weatherData = CurrentWeatherData;
   }
   static showNameOfLocation  ({name})  {
-    placeName.innerText = !getSearchName ? name : getSearchName;
+    placeName.innerText = !getSearchName ? name : nameFunc();
   }
   static showSingleImageOfNoteableLandMark (imgUrl, imageNumber) {
     noteableLMImgElem.style.backgroundImage = 'url('+imgUrl+')' ;
