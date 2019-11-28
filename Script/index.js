@@ -4,7 +4,20 @@ const  Currentweather = document.getElementById('weather');
 const showLocalCondition = document.getElementById('local-condition');
 let input = document.getElementById('search-input');
 const weatherImg = document.getElementById('weatherImg');
+const userNameElem = document.getElementById('username');
 //UI  class
+
+function askUserName() {
+    if(localStorage.getItem('username') !== null){
+        return;
+    }else {
+        const userName = prompt('enter your fullname');
+        localStorage.setItem('username', userName);  
+    }
+}
+askUserName();
+
+
 class UI {
     static showNameOfLocation ({name}) {
         placeName.innerText = name;
@@ -36,6 +49,10 @@ class UI {
         console.log(weather[0].main);
         Currentweather.innerText = weather[0].main;
         weatherImg.setAttribute('src', `${image(weather[0].main)}`);
+    }
+    static userName () {
+        let name = localStorage.getItem('username');
+        userNameElem.innerText = name;
     }
     static showLocalCondition ({main, wind}) {
         let localCondition = [
@@ -75,6 +92,8 @@ class UI {
         });
     }
 }
+
+UI.userName();
 
 
 //get current location 
